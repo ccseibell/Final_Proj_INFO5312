@@ -1,10 +1,18 @@
-body, html {
-    height: 100%;
+html {
+    height: 100%; 
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to top, #ffecd2 0%, #fcb69f 100%); 
+}
+
+body {
+    min-height: 100%; 
     margin: 0;
     padding: 0;
     font-family: 'Roboto', sans-serif;
-    background: linear-gradient(to bottom, #ffecd2 0%, #fcb69f 100%);
     color: #333;
+    display: flex;
+    flex-direction: column; 
 }
 
 .container {
@@ -15,6 +23,7 @@ body, html {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1; 
 }
 
 header, footer {
@@ -32,7 +41,7 @@ main {
 .graph-placeholder, .map-placeholder {
     background-color: #eee;
     width: 90%;
-    height: 30%; /* Adjust the height as a percentage of the width to maintain a 3:1 ratio */
+    height: 30%; 
     margin-top: 20px;
     border: 2px solid #666;
     display: flex;
@@ -41,4 +50,14 @@ main {
     font-size: 20px;
     font-weight: bold;
     color: #444;
+}
+
+#tooltip {
+    position: absolute;
+    visibility: hidden;
+    padding: 10px;
+    background-color: white;
+    border: 1px solid black;
+    border-radius: 5px;
+    pointer-events: none; 
 }
